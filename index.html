@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Criar uma conta</h2>
+        </div>
+
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Nome completo:</label>
+                <input type="text" id="username" placeholder="Digite seu nome completo..." minlength="15" required autofocus>
+               <!---- <input type="text" id="username" placeholder="Digite seu nome completo..." autofocus> -->
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro.</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Digite seu email..." minlength="10" required autofocus>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro.</small>
+            </div>
+
+             <div class="form-control">
+                <label for="birthday">Data de nascimento:</label >
+                <input type="date" id="birthday" required autofocus>
+                
+            </div> 
+
+            <div> 
+                <label for="sex">Sexo:</label> <br>
+                <input type="radio" name="sexo" id="isxmax" required> <label 
+                for="isxmax">Masculino</label> 
+                <input type="radio" name="sexo" id="isxfem"> <label 
+                for="isxfem">Feminino</label> 
+            </div> <br>
+
+            <div>
+                <label>Estado civil:</label>
+                <select id="estado-civil" required autofocus>
+                <option selected disabled value="">Selecione</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="outro">Outro</option>
+                </select>
+            </div> <br> 
+            <div>
+
+            <div>
+                <form id="myForm" onsubmit="return validarFormulario()"></form>
+                <label>Áreas de interesse:</label> <br>
+                <input type="checkbox" name="area1" id="checkbox1">Análise
+                <input type="checkbox" name="area2" id="checkbox2">Banco de dados <br>
+                <input type="checkbox" name="area3" id="checkbox3">Desenvolvimento
+                <input type="checkbox" name="area4" id="checkbox4">Engenharia de software <br>
+                <input type="checkbox" name="area5" id="checkbox5">Redes de computadores
+                </div>
+            
+             <button type="submit">Enviar</button>
+            
+
+        </form>
+    </div>
+
+    <script 
+        src="https://kit.fontawesome.com/71c8288e2e.js" crossorigin="anonymous">
+    </script>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
